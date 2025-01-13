@@ -72,3 +72,38 @@ header {
   background: transparent;
   cursor: pointer;
 }
+
+/* PAGE INFO SECTION */
+.page-info-section {
+  /* border: 1px solid; */
+  height: 316px;
+  background: url("./assets/backgrounds/bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  margin-bottom: 5px;
+}
+
+.other-page-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.link1 {
+  font-weight: 500;
+}
+.link2 {
+  font-weight: 300;
+}
