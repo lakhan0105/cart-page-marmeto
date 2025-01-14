@@ -290,6 +290,29 @@ header {
   background-color: #2db728;
 }
 
+/* FOOTER */
+.footer {
+  display: flex;
+  margin: auto;
+  padding: 4em 0;
+  background-color: #faf3ea;
+  justify-content: space-evenly;
+}
+
+.footer-el {
+  display: flex;
+  gap: 0.5em;
+}
+
+.footer-heading {
+  /* font-size: 25px; */
+  font-weight: 600;
+}
+
+.footer-subheading {
+  color: #898989;
+}
+
 /* SHOW */
 .show {
   display: block;
@@ -320,5 +343,13 @@ header {
     margin: auto;
     width: 100%;
     max-width: 95%;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
