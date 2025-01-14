@@ -10,6 +10,7 @@
 
 body {
   font-family: "Poppins", serif;
+  position: relative;
 }
 
 li {
@@ -75,7 +76,6 @@ header {
 
 /* PAGE INFO SECTION */
 .page-info-section {
-  /* border: 1px solid; */
   height: 316px;
   background: url("./assets/backgrounds/bg1.png");
   background-position: center;
@@ -106,4 +106,219 @@ header {
 }
 .link2 {
   font-weight: 300;
+}
+
+/* CART CONTAINER */
+.cart-section {
+  max-width: 1180px;
+  margin: auto;
+  padding: 50px 10px;
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.products {
+  max-width: 900px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+/* table styling */
+.table-container {
+  width: 100%;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1fr 0.7fr 1fr 0.3fr;
+  background-color: #f9f1e7;
+  padding: 10px 0;
+  font-weight: 500;
+  text-transform: capitalize;
+  gap: 30px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 0.7fr 1.2fr 1fr 0.7fr 1fr 0.3fr;
+  gap: 30px;
+  font-weight: 400;
+}
+
+.number-table-cell {
+  padding: 3px;
+  width: 30px;
+  margin: auto;
+  transform: translateX(-8px);
+  outline: none;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.img-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.text-grey {
+  color: #9f9f9f;
+}
+
+.del-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transform: translateX(-15%);
+}
+
+.empty-msg {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* totals-container */
+.totals-container {
+  width: 100%;
+  max-width: 370px;
+  min-height: 360px;
+  background: #f9f1e7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totals-heading {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.totals-row {
+  display: flex;
+  gap: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+.totals-row p {
+  font-weight: 500;
+}
+
+.totals-row .cart-subtotal {
+  color: #9f9f9f;
+}
+
+.totals-row .cart-total {
+  font-size: 20px;
+  font-weight: 500;
+  color: #b88e2f;
+}
+
+.checkout-btn {
+  width: 200px;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 0.5em;
+  background: transparent;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 1.2em;
+}
+
+/* MODAL STYLING */
+.modal-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #00000083;
+  z-index: 80;
+}
+
+.modal-card {
+  position: fixed;
+  left: 50%;
+  width: 70%;
+  max-width: 300px;
+  height: 200px;
+  top: 40%;
+  transform: translateX(-40%);
+  background: #fff;
+  padding: 1em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.modal-heading {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.modal-btns button {
+  padding: 5px 10px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid;
+}
+
+.modal-cancel-btn {
+  background: #b82f2f;
+  margin-left: 0.5em;
+}
+
+.modal-del-btn {
+  background-color: #2db728;
+}
+
+/* SHOW */
+.show {
+  display: block;
+}
+
+/* RESPONSIVENESS */
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .navlinks-list,
+  .icons-list {
+    display: none;
+  }
+
+  .cart-section {
+    flex-direction: column;
+  }
+
+  .products {
+    font-size: 12px;
+  }
+
+  .products .img-container {
+    display: none;
+  }
+
+  .totals-container {
+    margin-top: 2em;
+    margin: auto;
+    width: 100%;
+    max-width: 95%;
+  }
 }

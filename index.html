@@ -13,7 +13,10 @@
       <nav class="navbar">
         <!-- logo -->
         <div class="logo">
-          <!-- <img src="./assets/Meubel House_Logos-05.svg" alt="logo not found" /> -->
+          <img
+            src="./assets/icons/Meubel House_Logos-05 (1).svg"
+            alt="logo not found"
+          />
           <h2 class="logo-text">Marmeto</h2>
         </div>
 
@@ -76,7 +79,60 @@
       </div>
     </section>
 
+    <!-- CART SECTION -->
+    <section class="cart-section">
+      <!-- products container -->
+      <div class="products table-container">
+        <!-- header -->
+        <div class="table-header">
+          <div class="table-cell"></div>
+          <p class="table-cell">product</p>
+          <p class="table-cell">price</p>
+          <p class="table-cell">quantity</p>
+          <p class="table-cell">subtotal</p>
+          <div class="table-cell"></div>
+        </div>
+
+        <!-- mapped cartitems comes here -->
+        <div class="cart-items-container"></div>
+      </div>
+
+      <!-- cart totals container -->
+      <div class="totals-container">
+        <h2 class="totals-heading">Cart Totals</h2>
+
+        <div>
+          <div class="totals-row">
+            <p>Subtotal</p>
+            <span class="cart-subtotal">Rs. 250,000,00</span>
+          </div>
+          <div class="totals-row">
+            <p>Total</p>
+            <span class="cart-total">Rs. 250,000,00</span>
+          </div>
+        </div>
+
+        <button class="checkout-btn">Check out</button>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <section class="modal-container">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-card">
+        <h2 class="modal-heading">Are you sure?</h2>
+        <div class="modal-btns">
+          <button class="modal-del-btn">delete</button>
+          <button class="modal-cancel-btn">cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
+
     <!-- script files -->
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
