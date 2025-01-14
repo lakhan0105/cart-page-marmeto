@@ -42,6 +42,8 @@ const init = async () => {
       showModal(datasetId);
     });
   });
+
+  loadFooter();
 };
 
 // function to fetch the initial cartItems data from the api
@@ -192,5 +194,54 @@ modalDelBtn.addEventListener("click", (e) => {
 // listener on modal cancel btn and modal overlay
 modalCancelBtn.addEventListener("click", closeModal);
 modalOverlay.addEventListener("click", closeModal);
+
+const footerData = [
+  {
+    id: 1,
+    img: "./assets/footer-img/trophy.svg",
+    title: "high quality",
+    sub: "crafted from top materials",
+  },
+  {
+    id: 2,
+    img: "./assets/footer-img/guarantee.svg",
+    title: "warranty protection",
+    sub: "Order over 150 $",
+  },
+  {
+    id: 3,
+    img: "./assets/footer-img/shipping.svg",
+    title: "free shipping",
+    sub: "Over two years",
+  },
+  {
+    id: 4,
+    img: "./assets/footer-img/guarantee.svg",
+    title: "24/7 support",
+    sub: "dedicated support",
+  },
+];
+
+const footerEl = document.querySelector(".footer");
+function loadFooter() {
+  const mapped = footerData
+    .map((item) => {
+      console.log(item);
+      return `
+         <div class="footer-el">
+            <div class="footer-img-container">
+            <img src="${item.img}" alt="not found" />
+            </div>
+            <div>
+            <h3 class="footer-heading">${item.title}</h3>
+            <p class="footer-subheading">${item.sub}</p>
+            </div>
+        </div>
+        `;
+    })
+    .join("");
+
+  footerEl.innerHTML = mapped;
+}
 
 window.addEventListener("DOMContentLoaded", init);
